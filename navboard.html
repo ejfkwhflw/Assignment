@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="navboard.css">
+</head>
+<body>
+    <script>
+        function setURL(url){
+            document.getElementById("current_page").src = url;
+        }
+        </script>
+
+    <div class="navboard">
+    <div class="logo">
+        <img src=" https://cdn0.iconfinder.com/data/icons/sea-7/961/sealife-03-512.png" height="100px" width="100px">
+    </div>
+    <div class="title">OCTOPAGE</div>
+    <div class="title_shadow">OCTOPAGE</div>
+    <div class="nav">
+        <button onclick="setURL('a1-webdev.html')">Home</button>
+        <button onclick="setURL('page2.html')">Info</button>
+        <button onclick="setURL('page3.html')">Images</button>
+    </div>
+</div>
+
+<iframe id="current_page"src="a1-webdev.html"></iframe>
+</body>
+</html>

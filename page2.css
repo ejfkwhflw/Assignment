@@ -1,0 +1,86 @@
+.layout_page2{
+    max-width:100%;
+    max-height: 100%;
+    height: 900px;
+    display:grid;
+    grid-template-areas:
+    "sqtitle sqtitle"
+    "squid octopus"
+    "fn fn"
+    "footer footer";
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows:.9fr 6fr 3fr 2fr;
+    column-gap: 20px;
+}
+.layout_page2 > div.title{
+  grid-area: sqtitle;
+  font-size: 25px;
+  display:flex;
+} 
+.layout_page2 > div.squid {
+    grid-area: squid;
+    text-align: center;
+    width:100%;
+    display: flex;
+    contain: strict;
+  }
+  .layout_page2 > div.octopus {
+    grid-area: octopus;
+    text-align: center;
+    width:100%;
+    display: flex;
+    contain: strict;
+  }
+  .octopus>img, .squid>img{
+    width:max-content;
+    height:max-content;
+  }
+  .layout_page2 > div.fn {
+    grid-area: fn;
+    text-align: center;
+    width:100%;
+    contain: strict;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .layout_page2 > div.footer {
+    grid-area: footer;
+    text-align: center;
+    width:100%;
+    display: flex;
+    contain: strict;
+  }
+
+
+  .hoverable{
+    display: flex;
+    position: absolute;
+    z-index:2
+    }
+    #overlayTxt{
+      color:white;
+      font-size: 20px;
+      position:absolute;
+      z-index: 1;
+      width: inherit;
+      height: inherit;
+      justify-content: center;
+      display:flex;
+      flex-direction: column;
+      background-color: rgba(10,9,8,.8);
+      }
+    #overlayTxt> p{
+      width:90%;
+      align-self: center;
+    }
+    #overlayTxt> h1{
+      align-self: center;
+    }
+    #square:hover{
+      z-index:1;
+    }
+    #overlayTxt:hover{
+      z-index:2;
+      }

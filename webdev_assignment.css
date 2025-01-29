@@ -1,0 +1,163 @@
+body{
+  background-color: rgb(10,9,8);
+  color: white;
+  font-family: monospace;
+  margin:0%;
+}
+
+.main{ 
+  max-width:100%;
+    max-height: 100%;
+    height: fit-content;
+    display:grid;
+    grid-template-areas:
+    "first first"
+    "ktitle ktitle"
+    "second third"
+    "footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows:6fr 1fr 3fr 2fr;
+    row-gap: 20px;
+    background-color: rgb(10,9,8);
+    
+}
+.main> div#ktitle{
+  font-size:20px; 
+  grid-area: ktitle;
+  display: flex;
+  height: 50px;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.main >div  {
+background-color: rgb(10,9,8);
+}
+.main > div.first {
+  grid-area: first;
+  padding: 20px; 
+  text-align: center;
+  width:100%;
+  display: flex;
+  Row-gap: 20px;
+  background-color: #77A0A9;
+}
+.main > div.second {
+  grid-area: second;
+  text-align: center;
+  width:100%;
+  font-display: flex;
+  contain: strict;
+  border-radius: 10px;
+}
+.main > div.third {
+  grid-area: third;
+  text-align: center;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.main > div.footer {
+  grid-area: footer;
+  text-align: center; 
+  width:100%;
+  font-display: flex;
+}
+button{
+    background-color: #FC6471;
+    margin-right: 10px;
+    color: #22333B;
+    border: solid,#22333B,2px;
+    height: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    font-size: 24px;
+    font-family: monospace;
+    box-shadow: 0 5px #22333B;
+    border-radius: 20px;
+  }
+  button:hover{
+    background-color: #c44d57;
+  }
+  button:active {
+    background-color: #8d374e;
+    box-shadow: 0 2px #22333B;
+    transform: translateY(3px);
+  }
+#navboard{
+  width: 100%;
+}
+.section{
+width:35%;
+padding:10px;
+height: 450px;
+display: flex;
+flex-direction: column;
+contain:strict;
+}
+h1{
+  align-self: flex-start;
+  padding-top:0%;
+  margin-top: 0%;
+  margin-left:20px;
+}
+.section> button.slide{
+  width: 50px;
+  height: 50px;
+  margin:4px;
+  align-self: end;
+}
+.section> img#slide{
+width: 500px;
+height:400px;
+contain: strict;
+border-radius: 20px;
+
+}
+#switches{
+  margin-top:10px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+#switches>h1{
+font-size: 25px; 
+padding:5px;
+}
+#switches>h1:hover{
+  font-size: 30px;
+  color:aqua; 
+}
+
+#switches>h1:active{
+  color:blue; 
+}
+
+.box{
+  font-size:18px;
+  height: 150px;
+  width: 140px;
+  border-radius: 10px;
+  border: solid #77A0A9 2px;
+}
+.box> h1{
+font-size:18px;
+color:#77A0A9;
+margin:0px;
+}
+.box> p{
+  width:90%;
+  font-size:11px;
+  color:#77A0A9;
+  margin:0px;
+  }
+#quickfacts{
+  background-color: #22333B;
+  border-radius: 25px;
+  margin-top:10px; 
+  height: 425px;
+  justify-content: space-around;
+  font-family: monospace;
+}
