@@ -1,0 +1,116 @@
+<html>
+<head>
+    <link rel="stylesheet" href="mainpage.css">
+</head>
+<body>
+<div class="main">
+<div class="first">
+    <div class="section" id="quickfacts">
+        <style>
+            button.slider {
+              width: 100px;
+              height: 100px;
+              margin-left: 7px;
+              border-radius: 10px;
+              border:none;
+              z-index: 2;
+            }
+            .animate {
+              border:none;
+              width: 100px;
+              height: 100px;
+              animation-name: slide;
+              animation-duration: 0.8s;
+              animation-fill-mode: forwards;
+              animation-timing-function: ease-in-out;
+              z-index:2;
+            }
+            .undertxt{
+              color:white;
+              position: fixed;
+              width:100px;
+              height:425px;
+              margin-left: 7px;
+              z-index:1;
+              display:flex;
+              justify-content: flex-end;
+              flex-direction: column;
+              align-items: left;
+              
+            }
+            .undertxt>p{
+              margin-top: 4px;
+              margin-bottom: 4px;
+              height:100px;
+              width:100px;
+              font-size: 15px;
+              text-align: center;
+              border-radius: 10px;
+              background-color: #77A0A9;
+            }
+            @keyframes slide {
+              0% {margin-left: 0px;}
+              20%{margin-left: -10px;}
+              100% {margin-left: 250px;}
+            }
+              </style>
+              <script>
+            function DoAnimation(target) {
+              var targetElement = document.getElementById(target);
+              targetElement.className = "animate";
+            }
+              </script>
+
+<h1 style="font-style: italic; font-size: 50px;">QUICK FACTS</h1>
+<button id="1target" class= "slider" onclick="DoAnimation('1target');">1#</button>
+<button id="2target" class= "slider" onclick="DoAnimation('2target');">2#</button>
+<button id="3target" class= "slider" onclick="DoAnimation('3target');">3#</button>
+<div class="undertxt">
+<p>The plural form of octopus is actually “Octopuses”</p>
+<p>Octopuses have 3 hearts</p>
+<p>The Octopuses brain is shaped like a donut</p>
+</div>
+    </div>
+    <div style="width:65%; justify-content: right; margin-top: 20px;" class="section">
+        <img style="align-self: center;"id="slide" src="slideshow/1Octopus.jpg">
+        <div id="switches">
+        <button onclick="switchImg(-1, 0)" class="slide"><-</button>
+        <h1 onclick="document.location='page3.html'">See More Octopuses>></h1>
+        <button onclick="switchImg(1, 1)" class="slide">-></button> 
+      </div>
+    </div>
+    <script> 
+    var slideN=1;
+    function switchImg(N, direct){
+      if(slideN==4&&direct==1){
+        slideN=1;
+      }
+      else{
+        if(slideN==1&&direct==0){
+          slideN=4;
+        }
+        else{
+        slideN=slideN+N;
+        }
+      }
+      let next= "slideshow/"+slideN+"Octopus.jpg";
+      document.getElementById('slide').src= next;
+    }
+    </script>
+</div>
+<div id="ktitle">
+  <h1>CLASIFICATION</h1>
+</div>
+<div class="second">
+<img height="270px"width="270px"src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSbksl_m_j5rl7TThL14tQeYX-q2DWRtfOam408C8T6IsWNJFvSl3BL3q-bjr8R7mJQzC1z0buLDWCjpWuwvEdqfA">
+</div>
+<div class="third">
+<div class="box"> Kingdom<br><br>Animalia</div>
+<div class="box"> Phylum<br><br>Molluska</div>
+<div class="box">Class<br><br>Cepholopoda</div>
+<div class="box">Order<br><br>octopoda</div>
+</div>
+<div class="footer"></div>
+</div>
+</body>
+</html>
